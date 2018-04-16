@@ -32,3 +32,26 @@ id[i]=id[j];
 id[j]=temp;
 }
 }
+    wt[i]=0;
+}
+for(i=0;i<n;i++)
+{
+for(j=0;j<i;j++)
+{
+wt[i]=wt[i]+bt[j];
+}
+tat[i]=wt[i]+bt[i];
+}
+float avwt=0,avtat=0;
+printf("Process\tP\tBT\tWT\tTAT\n");
+for(i=0;i<n;i++)
+{
+printf("%d\t%d\t%d\t%d\t%d\n",id[i],p[i],bt[i],wt[i],tat[i]);
+avwt=avwt+wt[i];
+avtat=avtat+tat[i];
+}
+avwt=avwt/n;
+avtat=avtat/n;
+printf("Average Waiting Time: %f\n",avwt);
+printf("\nAverage Turnaround Time: %f",avtat);
+}

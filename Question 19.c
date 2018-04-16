@@ -31,3 +31,10 @@ main()
 			i[j+1].g=temp;
 		}
 	}
+	printf("\n**********************Order of billed students according to highest priority************************\n");
+	for(j=0;j<10;j++)
+	{
+		printf("\n Student : %c%d      %d",i[j].s,i[j].n,i[j].g);
+	}
+	
+}
